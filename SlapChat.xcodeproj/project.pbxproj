@@ -15,6 +15,7 @@
 		1B5504701DD102400043E319 /* AddMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B55046D1DD102400043E319 /* AddMessageViewController.swift */; };
 		1B5504711DD102400043E319 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B55046E1DD102400043E319 /* DataStore.swift */; };
 		1B5504721DD102400043E319 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B55046F1DD102400043E319 /* TableViewController.swift */; };
+		A21D2D291DD52A5F00F0EBFF /* RecipientTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21D2D281DD52A5F00F0EBFF /* RecipientTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		1B55046D1DD102400043E319 /* AddMessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddMessageViewController.swift; sourceTree = "<group>"; };
 		1B55046E1DD102400043E319 /* DataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
 		1B55046F1DD102400043E319 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		A21D2D281DD52A5F00F0EBFF /* RecipientTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipientTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				1B5504381DD1004A0043E319 /* AppDelegate.swift */,
 				1B55046E1DD102400043E319 /* DataStore.swift */,
 				1B55046F1DD102400043E319 /* TableViewController.swift */,
+				A21D2D281DD52A5F00F0EBFF /* RecipientTableViewController.swift */,
 				1B55046D1DD102400043E319 /* AddMessageViewController.swift */,
 				1B55043C1DD1004A0043E319 /* Main.storyboard */,
 				1B5504421DD1004A0043E319 /* Assets.xcassets */,
@@ -149,6 +152,7 @@
 				1B5504711DD102400043E319 /* DataStore.swift in Sources */,
 				1B5504701DD102400043E319 /* AddMessageViewController.swift in Sources */,
 				1B5504411DD1004A0043E319 /* SlapChat.xcdatamodeld in Sources */,
+				A21D2D291DD52A5F00F0EBFF /* RecipientTableViewController.swift in Sources */,
 				1B5504721DD102400043E319 /* TableViewController.swift in Sources */,
 				1B5504391DD1004A0043E319 /* AppDelegate.swift in Sources */,
 			);

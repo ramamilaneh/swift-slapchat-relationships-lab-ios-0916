@@ -12,6 +12,7 @@ import CoreData
 class DataStore {
     
     var messages:[Message] = []
+    var recipients: [Recipient] = []
     
     static let sharedInstance = DataStore()
     
@@ -85,6 +86,8 @@ class DataStore {
         }
     }
     
+    
+    
     // MARK: - Core Data generation of test data
     
     func generateTestData() {
@@ -109,4 +112,16 @@ class DataStore {
         fetchData()
     }
     
+}
+
+extension DataStore {
+    class func createRecipient(name: String,email: String, phoneNumber: String, twitterHandler: String) -> Recipient {
+        let context = DataStore.sharedInstance.persistentContainer.viewContext
+        let newRecipient = Recipient(context: context)
+        newRecipient.name = name
+        newRecipient.email = email
+        newRecipient.phoneNumber = phoneNumber
+        newRecipient.twitterHandle = twitterHandler
+        return newRecipient
+    }
 }

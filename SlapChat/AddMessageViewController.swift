@@ -11,6 +11,8 @@ import CoreData
 
 class AddMessageViewController: UIViewController {
 
+    var recipient: Recipient?
+    
     @IBOutlet weak var addMessageTextField: UITextField!
     
     override func viewDidLoad() {
@@ -24,6 +26,9 @@ class AddMessageViewController: UIViewController {
         let newMessage = NSEntityDescription.insertNewObject(forEntityName: "Message", into: context) as! Message
         newMessage.content = addMessageTextField.text
         newMessage.createdAt = NSDate()
+        
+        recipient?.addToMessages(newMessage)
+        
         store.saveContext()
         dismiss(animated: true, completion: nil)
     }
