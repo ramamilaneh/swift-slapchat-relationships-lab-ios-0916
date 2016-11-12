@@ -34,13 +34,12 @@ class RecipientTableViewController: UITableViewController {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
     }
 
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
@@ -61,8 +60,8 @@ class RecipientTableViewController: UITableViewController {
             recipient = store.recipients[indexPath.row]
         }
 
-        let newName = (recipient.name)! + "\t\t\t\t " + (recipient.phoneNumber)! + "\n\n\n"
-        let anotherName = (recipient.email)! + "\t\t\t\t " + (recipient.twitterHandle)!
+        let newName = (recipient.name)! + "\t\t\t\t\t\t" + (recipient.phoneNumber)!
+        let anotherName = (recipient.email)! + "\t\t\t\t\t\t " + (recipient.twitterHandle)!
         cell.textLabel?.text = newName
         cell.detailTextLabel?.text = anotherName
         return cell
@@ -85,20 +84,27 @@ class RecipientTableViewController: UITableViewController {
         }
     }
 
+// MARK: - Create Recipient Array
 
     func generateRecipient() {
+        
        let firstRecipient = DataStore.createRecipient(name: "Jim", email: "jim.com", phoneNumber: "123456", twitterHandler: "jimcom")
         store.recipients.append(firstRecipient)
+        
         let secondRecipient = DataStore.createRecipient(name: "Joel", email: "joel.com", phoneNumber: "456789", twitterHandler: "joelcom")
         store.recipients.append(secondRecipient)
+        
         let thirdRecipient = DataStore.createRecipient(name: "Anas", email: "anas.com", phoneNumber: "756535", twitterHandler: "anascom")
         store.recipients.append(thirdRecipient)
+        
         let fourthRecipient = DataStore.createRecipient(name: "Mary", email: "mary.com", phoneNumber: "906867", twitterHandler: "marycom")
         store.recipients.append(fourthRecipient)
         
         store.saveContext()
         
     }
+    
+ // MARK: - Fetch Recipient Entity
     
     func fetchRecipientData() {
         let context = store.persistentContainer.viewContext
@@ -116,6 +122,8 @@ class RecipientTableViewController: UITableViewController {
             generateRecipient()
         }
     }
+    
+// MARK: - Search function
     
     func filterContentForSearchText(searchText: String)
     {

@@ -14,11 +14,10 @@ class TableViewController: UITableViewController {
     var store = DataStore.sharedInstance
     var recipient: Recipient!
     var messages = [Message]()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.messages = recipient.messages?.allObjects as! [Message]
-       
         tableView.reloadData()
     }
     
@@ -26,29 +25,28 @@ class TableViewController: UITableViewController {
         
         super.viewWillAppear(true)
         self.messages = recipient.messages?.allObjects as! [Message]
-      
+        
         tableView.reloadData()
     }
-
+    
     // MARK: - Table view data source
     
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
-
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         return self.messages.count
     }
-
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "basicCell", for: indexPath)
-
+        
         let eachMessage = self.messages[indexPath.row]
         
         cell.textLabel?.text = eachMessage.content
-
+        
         return cell
     }
     
